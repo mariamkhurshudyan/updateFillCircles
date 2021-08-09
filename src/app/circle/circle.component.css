@@ -1,0 +1,26 @@
+.circle-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    background-color: aliceblue;
+    border: 1px solid #6A736F;
+   
+  }
+  
+  .circle {
+    display: flex;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .circle-wrapper {
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+  
