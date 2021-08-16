@@ -1,0 +1,26 @@
+<div class = "header">Join Us</div>
+<img src="/assets/images/undraw_remotely_2j6y.svg">
+<form (submit)='onSubmit()' class="formdiv" [formGroup]="loginForm">
+    <p class="error" *ngIf="wrongValues"> 
+        <small>Failed to sign in, please try again.</small> </p>
+
+    <label for="email">Email</label>
+    <input type="text" id='email' formControlName="email" [ngClass]="email().errors && email().touched ? 'hasError' : ''"/>
+    <div class="invalid-feedback" *ngIf='email().errors && email().touched'>
+        <div *ngIf="email().hasError('required')">
+            <small>Enter your email.</small>
+        </div>
+    </div>
+
+    <label for="password">Password</label>
+    <input type="password" id='password' formControlName="password" [ngClass]="password().errors && email().touched ? 'hasError' : ''"/>
+    <div class="invalid-feedback" *ngIf='password().errors && password().touched'>
+        <div *ngIf="password().hasError('required')">
+            <small>Enter your password.</small>
+        </div>
+    </div>
+
+    <button class="login" type="submit">Login</button>
+    <h4 class="subtitle">Don't have an account? <a routerLink="/register" class="subtitle">Sign Up</a></h4>
+</form>
+

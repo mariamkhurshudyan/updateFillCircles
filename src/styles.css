@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-*{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(238, 207, 146);
-}
+body {
+    background-color: rgb(159, 159, 238);
+        font-family: Cambria, Georgia, serif;
+ }

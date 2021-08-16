@@ -6,7 +6,6 @@
     margin: auto 100px;
     height: auto; 
   }
-  
   .controls-panel {
     display: flex;
     flex-flow: row wrap;
@@ -16,18 +15,14 @@
     align-items: center;
     min-height: 40px;
   }
-  
   .circles-container {
     display: flex;
     flex-flow: wrap;
     justify-content: flex-start;
     align-items: flex-start;
     width: 380px;
-     /* width: 800px;
-     height: 500px; */
   }
-  
-  .projects-container {
+   .projects-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -58,7 +53,6 @@
     cursor: pointer;
     
 }
-  
   .circles-container.container-100 {
     width: 280px;
   }
@@ -89,7 +83,6 @@
     align-items: center;
     width: 30px;
     height: 30px;
-    /* border: 1px solid #202731; */
     margin-left: 10px;
     border-radius: 30px;
     cursor: pointer;
@@ -119,9 +112,10 @@
     padding: 8px  8px;
     background-color: #D90B1C;
     cursor: pointer;
+    color: white;
   }
   
-  .button-fill-all {
+  .button-fill-all , .logout, .button-save{
     margin-left: 10px;
     border-radius: 13px;
     padding: 8px  8px;
@@ -130,16 +124,6 @@
     background-color: #003F63;
     cursor: pointer;
   }
-  .button-save {
-    margin-left: 10px;
-    border-radius: 13px;
-    padding: 8px  8px;
-    color: white;
-    background-color: #3EB595;
-    cursor: pointer;
-    border-color: rgba(18, 155, 155, 0.253);
-  }
-
   .size-selector {
       border-radius:5px 15px;
       padding: 8px 8px;
@@ -155,3 +139,4 @@
     background-color: rgb(238, 238, 238);
     outline: none;
   }
+

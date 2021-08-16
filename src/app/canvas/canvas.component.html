@@ -1,4 +1,5 @@
 <div class="canvas-component">
+  <button class="logout" (click)="onLogout()">Logout</button>
     <div class="controls-panel">
       <select class="size-selector"
               [(ngModel)]="selectedSize"
@@ -26,11 +27,14 @@
       <button class="button-save"
               (click)="onSave()"
               >Save</button>
+
       <input type="text" [(ngModel)]="projectName" placeholder="Write name here"/>
       <div class="projects-container">
         <div *ngFor="let project of projectList"
              class="project"
              (click)="selectProject(project)">
+                <!-- <button class = "button-delete"  (click)="onSave()">
+                  Edit</button> -->
                 <button class ="button-delete" (click) = "onDeletePicture(project)">Delete</button>
           <p>Project:{{project.name}}</p>
         </div>
@@ -41,6 +45,7 @@
                   [color]="circle.color"
                   (click)="onCircleClick(circle)">
       </app-circle>
+
     </div>
   </div>
   

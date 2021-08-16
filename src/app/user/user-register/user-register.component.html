@@ -1,0 +1,60 @@
+<div class = "header">Sign Up</div>
+<form (submit)="onSubmit()" [formGroup]="registerForm" class="formdiv">
+    <div class="title">Welcome</div>
+    <div class="subtitle">Let's create your account!</div> 
+    <label for="email">email</label>
+    <input type="text" id = 'email' formControlName="email"  [ngClass]="email().errors && email().touched ? 'hasError' : ''" />
+    <div class="invalid-feedback" *ngIf='email().errors && email().touched'>
+        <div *ngIf="email().hasError('required')">
+      <small>Email must be a valid email address</small></div>
+    </div>
+    <label for="firstName">First name</label>
+    <input type="text" id='firstName' formControlName="firstName" [ngClass]="firstName().errors && firstName().touched ? 'hasError' : ''"/>
+    <div class="invalid-feedback" *ngIf='firstName().errors && firstName().touched'>
+        <div *ngIf="firstName().hasError('required')">
+            <small>Enter your name</small>
+        </div>
+        <div *ngIf="firstName().hasError('minlength')">
+            <small>Minimum length for name is 3 symbol</small>
+        </div>
+    </div>
+
+    <label for="lastName">Last name</label>
+    <input type="text" id='lastName' formControlName="lastName" [ngClass]="lastName().errors && lastName().touched ? 'hasError' : ''"/>
+    <div class="invalid-feedback" *ngIf='lastName().errors && lastName().touched'>
+        <div *ngIf="lastName().hasError('required')">
+            <small>Enter your surname</small>
+        </div>
+        <div *ngIf="lastName().hasError('minlength')">
+            
+        </div>
+    </div>
+
+    <label for="password">Password</label>
+    <input type="password" id='password' formControlName="password" [ngClass]="password().errors && password().touched ? 'hasError' : ''"/>
+    <div class="invalid-feedback" *ngIf='password().errors && password().touched'>
+        <div *ngIf="password().hasError('required')">
+            <small>Enter your password</small>
+        </div>
+        <div *ngIf="password().hasError('minlength')">
+            <small>Minimum length is 3 symbol</small>
+        </div>
+    </div>
+
+    <label for="confirmPassword">Confirm password</label>
+    <input type="confirmPassword" id='confirmPassword' formControlName="confirmPassword" [ngClass]="confirmPassword().errors && confirmPassword().touched ? 'hasError' : ''"/>
+    <div class="invalid-feedback" *ngIf='confirmPassword().errors && confirmPassword().touched'>
+        <div *ngIf="confirmPassword().hasError('required')">
+            <small>Enter your password again.</small>
+        </div>
+        <div *ngIf="confirmPassword().hasError('ComparePassword')">
+            <small>Password doesn't match</small>
+        </div>
+    </div>
+    <button class="register" type="submit">Register</button>
+    <h4 class="subtitle">Do you have an account,<a routerLink="" class="subtitle">Login</a></h4>
+</form>
+<img src="/assets/images/undraw_remotely_2j6y.svg">
+
+
+
